@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {v4 as uuidv4} from 'uuid'
 import './App.css'
 
 document.title = 'SG Passwords Manager'
@@ -173,7 +174,7 @@ class App extends Component {
                   {passwordsList.map((eachPassword, index) => {
                     const {website, username, password} = eachPassword
                     return (
-                      <li className="added-password-item" key={index + 'index'}>
+                      <li className="added-password-item" key={uuidv4()}>
                         <h1 className="website-logo">{website[0]}</h1>
                         <div className="password-content">
                           <p>{website}</p>
